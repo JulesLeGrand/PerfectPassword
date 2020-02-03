@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28E7B14723E8C02A004A5F82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B14623E8C02A004A5F82 /* AppDelegate.swift */; };
+		28E7B14923E8C02A004A5F82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B14823E8C02A004A5F82 /* SceneDelegate.swift */; };
+		28E7B14B23E8C02A004A5F82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B14A23E8C02A004A5F82 /* ViewController.swift */; };
+		28E7B14E23E8C02A004A5F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E7B14C23E8C02A004A5F82 /* Main.storyboard */; };
+		28E7B15023E8C02B004A5F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E7B14F23E8C02B004A5F82 /* Assets.xcassets */; };
+		28E7B15323E8C02B004A5F82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E7B15123E8C02B004A5F82 /* LaunchScreen.storyboard */; };
+		28E7B15E23E8C02C004A5F82 /* PerfectPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B15D23E8C02C004A5F82 /* PerfectPasswordTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28E7B15A23E8C02C004A5F82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28E7B13B23E8C02A004A5F82 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28E7B14223E8C02A004A5F82;
+			remoteInfo = PerfectPassword;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28E7B14323E8C02A004A5F82 /* PerfectPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E7B14623E8C02A004A5F82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28E7B14823E8C02A004A5F82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		28E7B14A23E8C02A004A5F82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28E7B14D23E8C02A004A5F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28E7B14F23E8C02B004A5F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28E7B15223E8C02B004A5F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28E7B15423E8C02B004A5F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E7B15923E8C02C004A5F82 /* PerfectPasswordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectPasswordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E7B15D23E8C02C004A5F82 /* PerfectPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectPasswordTests.swift; sourceTree = "<group>"; };
+		28E7B15F23E8C02C004A5F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28E7B14023E8C02A004A5F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E7B15623E8C02C004A5F82 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28E7B13A23E8C02A004A5F82 = {
+			isa = PBXGroup;
+			children = (
+				28E7B14523E8C02A004A5F82 /* PerfectPassword */,
+				28E7B15C23E8C02C004A5F82 /* PerfectPasswordTests */,
+				28E7B14423E8C02A004A5F82 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28E7B14423E8C02A004A5F82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28E7B14323E8C02A004A5F82 /* PerfectPassword.app */,
+				28E7B15923E8C02C004A5F82 /* PerfectPasswordTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28E7B14523E8C02A004A5F82 /* PerfectPassword */ = {
+			isa = PBXGroup;
+			children = (
+				28E7B14623E8C02A004A5F82 /* AppDelegate.swift */,
+				28E7B14823E8C02A004A5F82 /* SceneDelegate.swift */,
+				28E7B14A23E8C02A004A5F82 /* ViewController.swift */,
+				28E7B14C23E8C02A004A5F82 /* Main.storyboard */,
+				28E7B14F23E8C02B004A5F82 /* Assets.xcassets */,
+				28E7B15123E8C02B004A5F82 /* LaunchScreen.storyboard */,
+				28E7B15423E8C02B004A5F82 /* Info.plist */,
+			);
+			path = PerfectPassword;
+			sourceTree = "<group>";
+		};
+		28E7B15C23E8C02C004A5F82 /* PerfectPasswordTests */ = {
+			isa = PBXGroup;
+			children = (
+				28E7B15D23E8C02C004A5F82 /* PerfectPasswordTests.swift */,
+				28E7B15F23E8C02C004A5F82 /* Info.plist */,
+			);
+			path = PerfectPasswordTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28E7B14223E8C02A004A5F82 /* PerfectPassword */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E7B16223E8C02C004A5F82 /* Build configuration list for PBXNativeTarget "PerfectPassword" */;
+			buildPhases = (
+				28E7B13F23E8C02A004A5F82 /* Sources */,
+				28E7B14023E8C02A004A5F82 /* Frameworks */,
+				28E7B14123E8C02A004A5F82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PerfectPassword;
+			productName = PerfectPassword;
+			productReference = 28E7B14323E8C02A004A5F82 /* PerfectPassword.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28E7B15823E8C02C004A5F82 /* PerfectPasswordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E7B16523E8C02C004A5F82 /* Build configuration list for PBXNativeTarget "PerfectPasswordTests" */;
+			buildPhases = (
+				28E7B15523E8C02C004A5F82 /* Sources */,
+				28E7B15623E8C02C004A5F82 /* Frameworks */,
+				28E7B15723E8C02C004A5F82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28E7B15B23E8C02C004A5F82 /* PBXTargetDependency */,
+			);
+			name = PerfectPasswordTests;
+			productName = PerfectPasswordTests;
+			productReference = 28E7B15923E8C02C004A5F82 /* PerfectPasswordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28E7B13B23E8C02A004A5F82 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = Julio;
+				TargetAttributes = {
+					28E7B14223E8C02A004A5F82 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					28E7B15823E8C02C004A5F82 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 28E7B14223E8C02A004A5F82;
+					};
+				};
+			};
+			buildConfigurationList = 28E7B13E23E8C02A004A5F82 /* Build configuration list for PBXProject "PerfectPassword" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28E7B13A23E8C02A004A5F82;
+			productRefGroup = 28E7B14423E8C02A004A5F82 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28E7B14223E8C02A004A5F82 /* PerfectPassword */,
+				28E7B15823E8C02C004A5F82 /* PerfectPasswordTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28E7B14123E8C02A004A5F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E7B15323E8C02B004A5F82 /* LaunchScreen.storyboard in Resources */,
+				28E7B15023E8C02B004A5F82 /* Assets.xcassets in Resources */,
+				28E7B14E23E8C02A004A5F82 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E7B15723E8C02C004A5F82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28E7B13F23E8C02A004A5F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E7B14B23E8C02A004A5F82 /* ViewController.swift in Sources */,
+				28E7B14723E8C02A004A5F82 /* AppDelegate.swift in Sources */,
+				28E7B14923E8C02A004A5F82 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E7B15523E8C02C004A5F82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E7B15E23E8C02C004A5F82 /* PerfectPasswordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28E7B15B23E8C02C004A5F82 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28E7B14223E8C02A004A5F82 /* PerfectPassword */;
+			targetProxy = 28E7B15A23E8C02C004A5F82 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28E7B14C23E8C02A004A5F82 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E7B14D23E8C02A004A5F82 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28E7B15123E8C02B004A5F82 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28E7B15223E8C02B004A5F82 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28E7B16023E8C02C004A5F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		28E7B16123E8C02C004A5F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28E7B16323E8C02C004A5F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F43J4XYW8F;
+				INFOPLIST_FILE = PerfectPassword/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diplomadoiOS.ppp.PerfectPassword;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28E7B16423E8C02C004A5F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F43J4XYW8F;
+				INFOPLIST_FILE = PerfectPassword/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diplomadoiOS.ppp.PerfectPassword;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28E7B16623E8C02C004A5F82 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F43J4XYW8F;
+				INFOPLIST_FILE = PerfectPasswordTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diplomadoiOS.ppp.PerfectPasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectPassword.app/PerfectPassword";
+			};
+			name = Debug;
+		};
+		28E7B16723E8C02C004A5F82 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = F43J4XYW8F;
+				INFOPLIST_FILE = PerfectPasswordTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.diplomadoiOS.ppp.PerfectPasswordTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PerfectPassword.app/PerfectPassword";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28E7B13E23E8C02A004A5F82 /* Build configuration list for PBXProject "PerfectPassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E7B16023E8C02C004A5F82 /* Debug */,
+				28E7B16123E8C02C004A5F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28E7B16223E8C02C004A5F82 /* Build configuration list for PBXNativeTarget "PerfectPassword" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E7B16323E8C02C004A5F82 /* Debug */,
+				28E7B16423E8C02C004A5F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28E7B16523E8C02C004A5F82 /* Build configuration list for PBXNativeTarget "PerfectPasswordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E7B16623E8C02C004A5F82 /* Debug */,
+				28E7B16723E8C02C004A5F82 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28E7B13B23E8C02A004A5F82 /* Project object */;
+}
