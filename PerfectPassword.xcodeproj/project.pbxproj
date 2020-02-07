@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281B1D1A23E8FB4400E8D1BD /* FormUIEventsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B1D1923E8FB4400E8D1BD /* FormUIEventsDelegate.swift */; };
+		282ACD8D23ECD65700E59BE5 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 282ACD8C23ECD65700E59BE5 /* UInt128.swift */; };
+		28B2D7BF23EB211C00510CC9 /* AESCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2D7BE23EB211C00510CC9 /* AESCipher.swift */; };
+		28B2D7C123EB215A00510CC9 /* SequenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2D7C023EB215A00510CC9 /* SequenceKey.swift */; };
+		28B2D7C323EB217800510CC9 /* DataManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B2D7C223EB217800510CC9 /* DataManagement.swift */; };
+		28CC935923E90FB10051AC1E /* ShowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CC935823E90FB10051AC1E /* ShowData.swift */; };
+		28CC935B23E90FBF0051AC1E /* ShowData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CC935A23E90FBF0051AC1E /* ShowData.xib */; };
+		28CC935D23E9112E0051AC1E /* ShowParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CC935C23E9112E0051AC1E /* ShowParametersViewController.swift */; };
+		28CC936023E945A50051AC1E /* ExtensionShowParamController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CC935F23E945A50051AC1E /* ExtensionShowParamController.swift */; };
+		28CC936223E94BC80051AC1E /* InputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28CC936123E94BC80051AC1E /* InputData.swift */; };
 		28E7B14723E8C02A004A5F82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B14623E8C02A004A5F82 /* AppDelegate.swift */; };
 		28E7B14923E8C02A004A5F82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B14823E8C02A004A5F82 /* SceneDelegate.swift */; };
-		28E7B14B23E8C02A004A5F82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B14A23E8C02A004A5F82 /* ViewController.swift */; };
 		28E7B14E23E8C02A004A5F82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E7B14C23E8C02A004A5F82 /* Main.storyboard */; };
 		28E7B15023E8C02B004A5F82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28E7B14F23E8C02B004A5F82 /* Assets.xcassets */; };
 		28E7B15323E8C02B004A5F82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28E7B15123E8C02B004A5F82 /* LaunchScreen.storyboard */; };
 		28E7B15E23E8C02C004A5F82 /* PerfectPasswordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B15D23E8C02C004A5F82 /* PerfectPasswordTests.swift */; };
+		28E7B16F23E8C17B004A5F82 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B16E23E8C17B004A5F82 /* CardViewController.swift */; };
+		28E7B17823E8D916004A5F82 /* CardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28E7B17723E8D916004A5F82 /* CardView.xib */; };
+		28E7B17A23E8D959004A5F82 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B17923E8D959004A5F82 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,10 +39,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		281B1D1923E8FB4400E8D1BD /* FormUIEventsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormUIEventsDelegate.swift; sourceTree = "<group>"; };
+		282ACD8C23ECD65700E59BE5 /* UInt128.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
+		28B2D7BE23EB211C00510CC9 /* AESCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESCipher.swift; sourceTree = "<group>"; };
+		28B2D7C023EB215A00510CC9 /* SequenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceKey.swift; sourceTree = "<group>"; };
+		28B2D7C223EB217800510CC9 /* DataManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagement.swift; sourceTree = "<group>"; };
+		28CC935823E90FB10051AC1E /* ShowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowData.swift; sourceTree = "<group>"; };
+		28CC935A23E90FBF0051AC1E /* ShowData.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShowData.xib; sourceTree = "<group>"; };
+		28CC935C23E9112E0051AC1E /* ShowParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowParametersViewController.swift; sourceTree = "<group>"; };
+		28CC935F23E945A50051AC1E /* ExtensionShowParamController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionShowParamController.swift; sourceTree = "<group>"; };
+		28CC936123E94BC80051AC1E /* InputData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputData.swift; sourceTree = "<group>"; };
 		28E7B14323E8C02A004A5F82 /* PerfectPassword.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PerfectPassword.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E7B14623E8C02A004A5F82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28E7B14823E8C02A004A5F82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		28E7B14A23E8C02A004A5F82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28E7B14D23E8C02A004A5F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28E7B14F23E8C02B004A5F82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28E7B15223E8C02B004A5F82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +59,9 @@
 		28E7B15923E8C02C004A5F82 /* PerfectPasswordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerfectPasswordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28E7B15D23E8C02C004A5F82 /* PerfectPasswordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfectPasswordTests.swift; sourceTree = "<group>"; };
 		28E7B15F23E8C02C004A5F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28E7B16E23E8C17B004A5F82 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		28E7B17723E8D916004A5F82 /* CardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardView.xib; sourceTree = "<group>"; };
+		28E7B17923E8D959004A5F82 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28CC935E23E945810051AC1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28CC935F23E945A50051AC1E /* ExtensionShowParamController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		28E7B13A23E8C02A004A5F82 = {
 			isa = PBXGroup;
 			children = (
@@ -79,12 +111,13 @@
 		28E7B14523E8C02A004A5F82 /* PerfectPassword */ = {
 			isa = PBXGroup;
 			children = (
-				28E7B14623E8C02A004A5F82 /* AppDelegate.swift */,
-				28E7B14823E8C02A004A5F82 /* SceneDelegate.swift */,
-				28E7B14A23E8C02A004A5F82 /* ViewController.swift */,
-				28E7B14C23E8C02A004A5F82 /* Main.storyboard */,
+				28CC935E23E945810051AC1E /* Extensions */,
+				28E7B17423E8D8CB004A5F82 /* Layouts */,
+				28E7B16B23E8C15A004A5F82 /* Utils */,
+				28E7B16A23E8C145004A5F82 /* StoryBoards */,
+				28E7B16923E8C136004A5F82 /* Delegates */,
+				28E7B16823E8C120004A5F82 /* ViewControllers */,
 				28E7B14F23E8C02B004A5F82 /* Assets.xcassets */,
-				28E7B15123E8C02B004A5F82 /* LaunchScreen.storyboard */,
 				28E7B15423E8C02B004A5F82 /* Info.plist */,
 			);
 			path = PerfectPassword;
@@ -97,6 +130,57 @@
 				28E7B15F23E8C02C004A5F82 /* Info.plist */,
 			);
 			path = PerfectPasswordTests;
+			sourceTree = "<group>";
+		};
+		28E7B16823E8C120004A5F82 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				28E7B16E23E8C17B004A5F82 /* CardViewController.swift */,
+				28CC935C23E9112E0051AC1E /* ShowParametersViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		28E7B16923E8C136004A5F82 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				28E7B14623E8C02A004A5F82 /* AppDelegate.swift */,
+				28E7B14823E8C02A004A5F82 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		28E7B16A23E8C145004A5F82 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				28E7B14C23E8C02A004A5F82 /* Main.storyboard */,
+				28E7B15123E8C02B004A5F82 /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		28E7B16B23E8C15A004A5F82 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				281B1D1923E8FB4400E8D1BD /* FormUIEventsDelegate.swift */,
+				28CC936123E94BC80051AC1E /* InputData.swift */,
+				28B2D7BE23EB211C00510CC9 /* AESCipher.swift */,
+				28B2D7C023EB215A00510CC9 /* SequenceKey.swift */,
+				28B2D7C223EB217800510CC9 /* DataManagement.swift */,
+				282ACD8C23ECD65700E59BE5 /* UInt128.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		28E7B17423E8D8CB004A5F82 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				28E7B17923E8D959004A5F82 /* CardView.swift */,
+				28E7B17723E8D916004A5F82 /* CardView.xib */,
+				28CC935823E90FB10051AC1E /* ShowData.swift */,
+				28CC935A23E90FBF0051AC1E /* ShowData.xib */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +264,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28CC935B23E90FBF0051AC1E /* ShowData.xib in Resources */,
 				28E7B15323E8C02B004A5F82 /* LaunchScreen.storyboard in Resources */,
+				28E7B17823E8D916004A5F82 /* CardView.xib in Resources */,
 				28E7B15023E8C02B004A5F82 /* Assets.xcassets in Resources */,
 				28E7B14E23E8C02A004A5F82 /* Main.storyboard in Resources */,
 			);
@@ -200,9 +286,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28E7B14B23E8C02A004A5F82 /* ViewController.swift in Sources */,
+				28B2D7BF23EB211C00510CC9 /* AESCipher.swift in Sources */,
+				28CC936023E945A50051AC1E /* ExtensionShowParamController.swift in Sources */,
+				28B2D7C323EB217800510CC9 /* DataManagement.swift in Sources */,
+				28E7B17A23E8D959004A5F82 /* CardView.swift in Sources */,
+				28B2D7C123EB215A00510CC9 /* SequenceKey.swift in Sources */,
+				282ACD8D23ECD65700E59BE5 /* UInt128.swift in Sources */,
 				28E7B14723E8C02A004A5F82 /* AppDelegate.swift in Sources */,
+				28CC935923E90FB10051AC1E /* ShowData.swift in Sources */,
+				28CC935D23E9112E0051AC1E /* ShowParametersViewController.swift in Sources */,
+				28E7B16F23E8C17B004A5F82 /* CardViewController.swift in Sources */,
 				28E7B14923E8C02A004A5F82 /* SceneDelegate.swift in Sources */,
+				28CC936223E94BC80051AC1E /* InputData.swift in Sources */,
+				281B1D1A23E8FB4400E8D1BD /* FormUIEventsDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.diplomadoiOS.ppp.PerfectPassword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -390,7 +486,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.diplomadoiOS.ppp.PerfectPassword;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

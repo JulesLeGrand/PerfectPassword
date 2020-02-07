@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cmQ-mb-u3z">
+    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card-->
+        <scene sceneID="aMd-lU-FKo">
+            <objects>
+                <viewController id="UCa-eM-Dl6" customClass="CardViewController" customModule="PerfectPassword" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zV1-W2-0f7">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5JD-mT-fGa" customClass="CardView" customModule="PerfectPassword" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="974"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5JD-mT-fGa" firstAttribute="top" secondItem="bsz-GW-obC" secondAttribute="top" id="1dA-CJ-C6S"/>
+                            <constraint firstItem="bsz-GW-obC" firstAttribute="trailing" secondItem="5JD-mT-fGa" secondAttribute="trailing" id="Klc-I0-tvd"/>
+                            <constraint firstItem="5JD-mT-fGa" firstAttribute="leading" secondItem="bsz-GW-obC" secondAttribute="leading" id="UlT-br-pYO"/>
+                            <constraint firstItem="bsz-GW-obC" firstAttribute="bottom" secondItem="5JD-mT-fGa" secondAttribute="bottom" id="euY-lf-DR6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bsz-GW-obC"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Card" image="cardIcon" selectedImage="cardIcon" id="J3w-bz-pC7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SIO-Ga-RVb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="465"/>
+        </scene>
+        <!--Form-->
+        <scene sceneID="grJ-sY-AIo">
+            <objects>
+                <viewController id="iBc-rQ-wma" customClass="ShowParametersViewController" customModule="PerfectPassword" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C68-jq-02o">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hhU-5l-LUN" customClass="ShowData" customModule="PerfectPassword" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="974"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hhU-5l-LUN" firstAttribute="top" secondItem="aEN-23-6Wl" secondAttribute="top" id="7ja-cE-oqV"/>
+                            <constraint firstItem="aEN-23-6Wl" firstAttribute="bottom" secondItem="hhU-5l-LUN" secondAttribute="bottom" id="ZUZ-hs-G5M"/>
+                            <constraint firstItem="aEN-23-6Wl" firstAttribute="trailing" secondItem="hhU-5l-LUN" secondAttribute="trailing" id="ftp-4n-hJA"/>
+                            <constraint firstItem="hhU-5l-LUN" firstAttribute="leading" secondItem="aEN-23-6Wl" secondAttribute="leading" id="nu8-zB-5fe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aEN-23-6Wl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Form" image="formIcon" selectedImage="formIcon" id="1ak-72-R7F"/>
+                    <connections>
+                        <outlet property="showDataView" destination="hhU-5l-LUN" id="3h4-F8-yMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aQR-Na-BtW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1929" y="-194"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5iM-te-Crz">
+            <objects>
+                <tabBarController id="cmQ-mb-u3z" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sNe-1f-pUj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="iBc-rQ-wma" kind="relationship" relationship="viewControllers" id="Ul7-i7-mdX"/>
+                        <segue destination="UCa-eM-Dl6" kind="relationship" relationship="viewControllers" id="577-34-dma"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XNf-WV-0IW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="137"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cardIcon" width="25" height="17.333333969116211"/>
+        <image name="formIcon" width="25" height="21"/>
+    </resources>
+</document>
