@@ -32,4 +32,10 @@ class DataManagement: HandleDataDelegate {
             userDefaults.synchronize()
     }
     
+    func retrieveInitialData() -> (key: String, passLength: Int, charSet: String, cardArray: [String]) {
+            let ud = UserDefaults.standard
+        guard let key = ud.string(forKey: "key"), let length = ud.integer(forKey: "passCodeLength") as Int?, let charSet = ud.string(forKey: "characterSet"), let cardArray = ud.array(forKey: "cardArray")  else { return ("",2,"", [])}
+        return (key, length, charSet, cardArray as! [String])
+    }
+    
 }

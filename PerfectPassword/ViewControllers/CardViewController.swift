@@ -15,23 +15,23 @@ class CardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        delegate = cipherTasks
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         debugPrint("En viewWillAppear")
         //TODO: Preguntar si existen datos guardados para mostrar la tarjeta
+        let initialData = delegate?.retrieveInitialData()
+            if (initialData?.cardArray.isEmpty)! {
+                debugPrint("Esta vacio el arreglo de card")
+            }
+        
+        
     }
-    
-//    func customInit(myInputData: InputData) {
-//        self.delegate = cipherTasks
-//        let cardArray: [String] = (self.delegate?.getCard(inputData: myInputData))!
-//        print(cardArray)
-//    }
-    
+        
     func customInitSymmetric(cardContent: [String]) {
-        debugPrint(cardContent)
+        debugPrint("DEsde customInitSymmetric \(cardContent)")
     }
 
 }

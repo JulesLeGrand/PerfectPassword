@@ -22,6 +22,7 @@ protocol HandleDataDelegate {
     func getNewSequenceKey() -> (keyObject: Any, keyString: String)
     func saveKey(key: String)
     func retrieveKey() -> String
+    func retrieveInitialData() -> (key: String, passLength: Int, charSet: String, cardArray: [String])
 }
 
 protocol CipherTasksDelegate {

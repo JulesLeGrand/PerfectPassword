@@ -27,11 +27,21 @@ class ShowParametersViewController: UIViewController {
         setupController()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let initialData = delegate?.retrieveInitialData() {
+//           print("DEsde viewWillAppear_ShowParametersViewController \(initialData)")
+            showDataView.passcodeLengthLbl.text = String(initialData.passLength)
+        }
+    }
+    
     func setupController() {
         showDataView.mDelegate = self
         showDataView.characterSetTV.delegate = self
         setupTextView()
     }
+    
+    
     
     func setupTextView() {
         let toolbar = UIToolbar(frame: CGRect(origin: .zero, size: .init(width: view.frame.size.width, height: 90)))
