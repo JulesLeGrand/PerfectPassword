@@ -7,13 +7,29 @@
 //
 
 import Foundation
+import CryptoKit
 
 class DataManagement: HandleDataDelegate {
     
-    func getNewSequenceKey() -> String {
-        let sequenceKey = SequenceKey()
-        let key = sequenceKey.getSequenceKeyToHex(key: sequenceKey.getNewKey())
-        print("In getNewSequenceKey")
-        return key
+    func retrieveKey() -> String {
+        guard let myKey = UserDefaults.standard.string(forKey: "myKey") else {
+        debugPrint("Error retrieving key")
+        return "Error!"
+        }
+        return myKey
     }
+    
+    func getNewSequenceKey() -> (keyObject: Any, keyString: String) {
+        let sequenceKey = SequenceKey()
+        let key = sequenceKey.getNewKey()
+        let keyString = sequenceKey.getSequenceKeyToHex(key: key)
+        return (key, keyString)
+    }
+    
+    func saveKey(key: String)  {
+        let userDefaults = UserDefaults.standard
+            userDefaults.set(key, forKey: "myKey")
+            userDefaults.synchronize()
+    }
+    
 }

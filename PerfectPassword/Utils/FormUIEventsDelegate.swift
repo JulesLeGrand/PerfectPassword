@@ -8,15 +8,24 @@
 
 import Foundation
 import UIKit
+import CryptoKit
 
 protocol FormUIEventsDelegate {
     
     func textEditTapped()
-    func generatePassTapped(inputData: InputData)
+    func generatePassTapped(passLength: Int, charSet: String)
     func newSequenceTapped()
     func stepperTapped(length: Int)
 }
 
 protocol HandleDataDelegate {
-    func getNewSequenceKey() -> String
+    func getNewSequenceKey() -> (keyObject: Any, keyString: String)
+    func saveKey(key: String)
+    func retrieveKey() -> String
+}
+
+protocol CipherTasksDelegate {
+    func getCard(passLength: Int, charSet: String) -> [String]
+    func saveInputData(key: String, passcodeLength: Int, characterSet: String)
+    func retrieveInitialData() -> (key: String, passLength: Int, charSet: String, cardArray: [String])
 }

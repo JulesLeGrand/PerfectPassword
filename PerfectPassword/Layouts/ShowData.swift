@@ -10,7 +10,7 @@ import UIKit
 
 class ShowData: UIView {
     
-    var inputData: InputData?
+//    var inputData: InputData?
     
     @IBOutlet weak var sequenceKeyLbl: UILabel!
     @IBOutlet weak var passcodeLengthLbl: UILabel!
@@ -24,9 +24,8 @@ class ShowData: UIView {
     }
     
     @IBAction func generatePassTap(_ sender: Any) {
-        if let sequence = sequenceKeyLbl.text, let passcodeLength = passcodeLengthLbl?.text, let characterSet = characterSetTV.text {
-            inputData = InputData(sequenceKey: sequence, passcodeLength: Int(passcodeLength), characterSet: characterSet)
-            mDelegate?.generatePassTapped(inputData: self.inputData!)
+        if let passcodeLength = passcodeLengthLbl?.text, let characterSet = characterSetTV.text {
+            mDelegate?.generatePassTapped(passLength: Int(passcodeLength)!, charSet: characterSet)
         }
     }
     

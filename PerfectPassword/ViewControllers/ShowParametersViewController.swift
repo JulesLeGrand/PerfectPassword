@@ -10,10 +10,12 @@ import UIKit
 
 class ShowParametersViewController: UIViewController {
     
-//    let storyBoard = UIStoryboard(name: <#T##String#>, bundle: <#T##Bundle?#>)
-    
     var delegate: HandleDataDelegate?
     let dataManagement = DataManagement()
+    
+    var delegateChiper: CipherTasksDelegate?
+    let cipherTasks = AESCipher()
+    
     let cardVC = CardViewController()
     
     @IBOutlet weak var showDataView: ShowData!
@@ -21,6 +23,7 @@ class ShowParametersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = dataManagement
+        self.delegateChiper = cipherTasks
         setupController()
     }
     
