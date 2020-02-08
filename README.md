@@ -18,3 +18,12 @@ Para las operaciones con números de 128 bits se usa la siguiente biblioteca:
 ## Consideraciones
 
 Esta app funciona para teléfonos de iPhone 8 en adelante  con iOS 13.2 en adelante debido al uso de la biblioteca **Cryptokit**
+
+## Instalación
+ 
+ 1. Tener instalado Xcode al menos la versión 11.3.1(11C504)
+ 2. Clonar el repositorio usando la siguiente liga [https://github.com/JulesLeGrand/PerfectPassword.git].
+ 3. Abrir el archivo PerfectPassword.xcodeproj
+ 4. Seleccionar un emulador (Se recomienda iPhone 8) o algún otro con iOS 13.3.
+ 5. En Xcode en el menú Product elegir la opción Run
+ 6. Esperar a que construya e inicie la app.
