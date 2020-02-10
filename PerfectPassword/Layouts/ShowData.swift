@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 class ShowData: UIView {
     
 //    var inputData: InputData?
@@ -18,6 +19,7 @@ class ShowData: UIView {
     @IBOutlet weak var newSequenceBtn: UIButton!
     @IBOutlet weak var generatePassBtn: UIButton!
     
+    var mDelegate: FormUIEventsDelegate?
     
     @IBAction func newSequenceTap(_ sender: Any) {
         mDelegate?.newSequenceTapped()
@@ -34,7 +36,7 @@ class ShowData: UIView {
         passcodeLengthLbl.text = String(format: "%.0f",sender.value)
     }
     
-    var mDelegate: FormUIEventsDelegate?
+    
     
     let nibName = "ShowData"
     var contentView: UIView?

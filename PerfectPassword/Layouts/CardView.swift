@@ -8,10 +8,14 @@
 
 import UIKit
 
+@IBDesignable
 class CardView: UIView {
     
     let nibName = "CardView"
     var contentView: UIView?
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
