@@ -15,6 +15,18 @@ class CardView: UIView {
     var contentView: UIView?
     
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout!
+        {
+        didSet {
+//            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+//            debugPrint("El minimumInteritemSpacing -> \(collectionLayout.minimumInteritemSpacing)")
+            collectionLayout.minimumInteritemSpacing = 0
+//            debugPrint("El minimumLineSpacing -> \(collectionLayout.minimumLineSpacing)")
+            collectionLayout.minimumLineSpacing = 0
+            collectionLayout.scrollDirection = .vertical
+            collectionLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
+    }
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -38,6 +50,12 @@ class CardView: UIView {
         view.frame = self.bounds
         self.addSubview(view)
         contentView = view
+        initCollectionView()
+    }
+    
+    func initCollectionView() {
+        let nib = UINib (nibName: "CustomCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "CustomCell")
     }
     
 }

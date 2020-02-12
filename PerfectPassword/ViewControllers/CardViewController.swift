@@ -19,7 +19,9 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = cipherTasks
-        initCollectionView()
+        fillTestArray()
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +34,6 @@ class CardViewController: UIViewController {
             if (initialData?.cardArray.isEmpty)! {
                 debugPrint("Esta vacio el arreglo de card")
             } else {
-//                cardPassView.collectionView.reloa
                 self.cardArray = initialData!.cardArray
             }
         
@@ -43,9 +44,24 @@ class CardViewController: UIViewController {
         debugPrint("DEsde customInitSymmetric \(cardContent)")
     }
     
-    func initCollectionView() {
-        let nib = UINib (nibName: "CustomCell", bundle: nil)
-        cardPassView.collectionView.register(nib, forCellWithReuseIdentifier: "CustomCell")
+
+    
+    func fillTestArray() {
+//        let inicio = 123456789101213
+//        let inicio = 1234
+        let inicio = 10
+        for i in inicio ... (inicio + 109) {
+            cardArray.append(String(i))
+        }
+        print(cardArray)
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .landscapeLeft
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
     }
 
 }

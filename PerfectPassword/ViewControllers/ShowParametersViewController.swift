@@ -25,6 +25,8 @@ class ShowParametersViewController: UIViewController {
         self.delegate = dataManagement
         self.delegateChiper = cipherTasks
         setupController()
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,6 +62,14 @@ class ShowParametersViewController: UIViewController {
     
     @objc func doneBtnAction() {
         self.view.endEditing(true)
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
     }
 
 }
