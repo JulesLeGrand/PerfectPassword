@@ -15,13 +15,15 @@ extension ShowParametersViewController: FormUIEventsDelegate {
         let initialData = cipherTasks.retrieveInitialData()
         print("Mi inicial data: \(initialData)")
         if initialData.key == "" {
-            let cardArray = cipherTasks.getCard(passLength: passLength, charSet: charSet)
-            cardVC.customInitSymmetric(cardContent: cardArray)
+            let cardArray = cipherTasks.getCardAndKey(passLength: passLength, charSet: charSet)
+            cardVC.customInitSymmetric(cardContent: cardArray.cardArray)
             self.navigationController?.pushViewController(cardVC, animated: true)
             tabBarController?.selectedIndex = 1
         } else {
             //TODO: COntruye tarjeta y muestrala
+//            showDataView.sequenceKeyLbl.text = initialData.key
             debugPrint("YA existe tarjeta")
+            self.inflatePassCard()
         }
     }
     
@@ -45,16 +47,20 @@ extension ShowParametersViewController: FormUIEventsDelegate {
             self.navigationController?.popViewController(animated: true)
         }
         let yes = UIAlertAction(title: "Ok", style: .destructive) { (action) in
-            
-            guard let length = self.showDataView.passcodeLengthLbl.text, let charSet = self.showDataView.characterSetTV.text else { return }
-            let cardArray = self.cipherTasks.getCard(passLength: Int(length)!, charSet: charSet)
-            self.cardVC.customInitSymmetric(cardContent: cardArray)
-            self.navigationController?.pushViewController(self.cardVC, animated: true)
-            self.tabBarController?.selectedIndex = 1
+            self.inflatePassCard()
         }
         alert.addAction(cancel)
         alert.addAction(yes)
         present(alert, animated: true, completion: nil)
+    }
+    
+    func inflatePassCard() {
+        guard let charSet = self.showDataView.characterSetTV.text else { return }
+        let cardArrayAndKey = self.cipherTasks.getCardAndKey(passLength: 11, charSet: charSet)
+        self.showDataView.sequenceKeyLbl.text = cardArrayAndKey.key
+        self.cardVC.customInitSymmetric(cardContent: cardArrayAndKey.cardArray)
+        self.navigationController?.pushViewController(self.cardVC, animated: true)
+        self.tabBarController?.selectedIndex = 1
     }
     
 }

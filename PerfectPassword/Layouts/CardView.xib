@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="landscape" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -15,11 +15,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Y7E-eN-ygU">
-                    <rect key="frame" x="20" y="20" width="696" height="374"/>
+                    <rect key="frame" x="20" y="61" width="335" height="586"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="fhB-RR-eQj">
                         <size key="itemSize" width="120" height="40"/>
@@ -28,20 +28,37 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eo8-BH-yYI">
+                    <rect key="frame" x="185" y="10" width="22" height="41"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYL-SE-AVH">
+                    <rect key="frame" x="308" y="10" width="21" height="41"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Y7E-eN-ygU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="4Y4-2f-MM2"/>
-                <constraint firstItem="Y7E-eN-ygU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AIG-sU-rsK"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y7E-eN-ygU" secondAttribute="bottom" constant="20" id="Ar4-06-rIK"/>
-                <constraint firstItem="Y7E-eN-ygU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Niz-WD-pKe"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y7E-eN-ygU" secondAttribute="trailing" constant="20" id="Xqf-fy-Hia"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y7E-eN-ygU" secondAttribute="bottom" constant="20" id="d08-n1-nNf"/>
-                <constraint firstItem="Y7E-eN-ygU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ti4-CC-ekr"/>
-                <constraint firstItem="Y7E-eN-ygU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xIf-4l-GNG"/>
+                <constraint firstItem="Y7E-eN-ygU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="3Vp-9v-mdS"/>
+                <constraint firstItem="Y7E-eN-ygU" firstAttribute="top" secondItem="rYL-SE-AVH" secondAttribute="bottom" constant="10" id="9k0-G8-Nct"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Y7E-eN-ygU" secondAttribute="bottom" constant="20" id="O4c-XT-rKV"/>
+                <constraint firstItem="Eo8-BH-yYI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="PQy-rM-KIm"/>
+                <constraint firstItem="Y7E-eN-ygU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ths-3P-Mr3"/>
+                <constraint firstItem="rYL-SE-AVH" firstAttribute="leading" secondItem="Eo8-BH-yYI" secondAttribute="trailing" constant="101" id="Zm2-sE-Aks"/>
+                <constraint firstItem="Y7E-eN-ygU" firstAttribute="top" secondItem="Eo8-BH-yYI" secondAttribute="bottom" constant="10" id="ZwF-Ge-Ofl"/>
+                <constraint firstItem="Y7E-eN-ygU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="dQt-jv-zIC"/>
+                <constraint firstItem="rYL-SE-AVH" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="gCU-mF-uiM"/>
+                <constraint firstItem="Y7E-eN-ygU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="iSf-NV-qwZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y7E-eN-ygU" secondAttribute="trailing" constant="20" id="l2h-br-cyQ"/>
+                <constraint firstItem="Eo8-BH-yYI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="185" id="qbZ-eS-Vaq"/>
+                <constraint firstItem="Y7E-eN-ygU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="yFU-Jd-11n"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="136.95652173913044" y="142.02898550724638"/>
+            <point key="canvasLocation" x="136.23188405797103" y="141.84782608695653"/>
         </view>
     </objects>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 @IBDesignable
 class CardView: UIView {
@@ -27,7 +28,6 @@ class CardView: UIView {
             collectionLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         }
     }
-    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

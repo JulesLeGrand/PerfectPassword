@@ -20,6 +20,8 @@ class ShowData: UIView {
     @IBOutlet weak var generatePassBtn: UIButton!
     
     var mDelegate: FormUIEventsDelegate?
+    let nibName = "ShowData"
+    var contentView: UIView?
     
     @IBAction func newSequenceTap(_ sender: Any) {
         mDelegate?.newSequenceTapped()
@@ -30,16 +32,6 @@ class ShowData: UIView {
             mDelegate?.generatePassTapped(passLength: Int(passcodeLength)!, charSet: characterSet)
         }
     }
-    
-    @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        mDelegate?.stepperTapped(length: Int(sender.value))
-        passcodeLengthLbl.text = String(format: "%.0f",sender.value)
-    }
-    
-    
-    
-    let nibName = "ShowData"
-    var contentView: UIView?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -62,6 +54,7 @@ class ShowData: UIView {
         view.frame = self.bounds
         self.addSubview(view)
         contentView = view
+        passcodeLengthLbl.text = String(11)
     }
     
     

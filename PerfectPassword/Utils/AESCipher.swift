@@ -10,35 +10,39 @@ import Foundation
 import CryptoKit
 
 class AESCipher: CipherTasksDelegate {
-    
-    
-    func saveInputData(key: String, passcodeLength: Int, characterSet: String) {
+
+    func saveInputData(key: String, characterSet: String, initialCounter: Int) {
                 let ud = UserDefaults.standard
         ud.set(characterSet, forKey: "characterSet")
-        ud.set(passcodeLength, forKey: "passCodeLength")
+        ud.set(initialCounter, forKey: "initialCounter")
         ud.set(key, forKey: "key")
         ud.synchronize()
     }
     
-    func retrieveInitialData() -> (key: String, passLength: Int, charSet: String, cardArray: [String]) {
+    func retrieveInitialData() -> (key: String, charSet: String, cardArray: [String]) {
             let ud = UserDefaults.standard
-        guard let key = ud.string(forKey: "key"), let length = ud.integer(forKey: "passCodeLength") as Int?, let charSet = ud.string(forKey: "characterSet"), let cardArray = ud.array(forKey: "cardArray")  else { return ("",2,"", [])}
-        return (key, length, charSet, cardArray as! [String])
+        guard let key = ud.string(forKey: "key"), let charSet = ud.string(forKey: "characterSet"), let cardArray = ud.array(forKey: "cardArray")  else { return ("","", [])}
+        return (key, charSet, cardArray as! [String])
     }
     
     
     var cardArray: [String] = ["HOLA"]
     
-    func getCard(passLength: Int, charSet: String) -> [String] {
+    func getCardAndKey(passLength: Int, charSet: String) -> (cardArray: [String], key: String) {
+//        let
         debugPrint("Datos de entrada desde AESCipher --> \(passLength) + \(charSet)")
         let key = getNewKey()
-        saveInputData(key: getSequenceKeyToHex(key: key), passcodeLength: passLength, characterSet: charSet)
+        let firstCount = getFirstCount()
+        saveInputData(key: getSequenceKeyToHex(key: key), characterSet: charSet, initialCounter: firstCount)
         let characterSetArray = Array(charSet)
+        let rowTitleArray = setRowTitles()
         var remainderArray = [Int]()
         var mapedArray = [Character]()
         var cardArray = [String]()
+        cardArray.removeAll()
+        saveCardArray(cardArray: cardArray)
         
-        for actual in 0...349 {
+        for actual in firstCount...(firstCount + 200) {
             do {
                 let cipherText = getCipherText(key: key , message: String(format: "%016d", actual))
                 let divisor = UInt128(passLength)
@@ -55,8 +59,29 @@ class AESCipher: CipherTasksDelegate {
             let cadena = mapedArray[i...miVar]
             cardArray.append(String(cadena))
         }
+        cardArray.removeLast()
+        
+//        for j in 0...rowTitleArray.count {
+//            for i in stride(from: 0, to: 18, by: 3) {
+//                cardArray.insert(rowTitleArray[j], at: i)
+//                print(cardArray)
+//            }
+//        }
+//        print(rowTitleArray)
+        cardArray.insert(rowTitleArray[0], at: 0)
+        cardArray.insert(rowTitleArray[1], at: 3)
+        cardArray.insert(rowTitleArray[2], at: 6)
+        cardArray.insert(rowTitleArray[3], at: 9)
+        cardArray.insert(rowTitleArray[4], at: 12)
+        cardArray.insert(rowTitleArray[5], at: 15)
+        cardArray.insert(rowTitleArray[6], at: 18)
+        cardArray.insert(rowTitleArray[7], at: 21)
+        cardArray.insert(rowTitleArray[8], at: 24)
+        cardArray.insert(rowTitleArray[9], at: 27)
+//        print(cardArray)
+//        TODO: Mejorar esto con ciclos
         saveCardArray(cardArray: cardArray)
-        return cardArray
+        return (cardArray, getSequenceKeyToHex(key: key))
     }
     
     func getOriginal(nonce: AES.GCM.Nonce, cipherText: Data, tag: Data) -> (String,String) {
@@ -115,5 +140,22 @@ class AESCipher: CipherTasksDelegate {
         let ud = UserDefaults.standard
         guard let cardArray = ud.array(forKey: "cardArray") else { return [String]()}
         return cardArray as! [String]
+    }
+    
+    func getFirstCount() -> Int {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        let second = calendar.component(.second, from: date)
+        return hour + minute + second
+    }
+    
+    func setRowTitles() -> [String] {
+        var rowTitlesArray = [String]()
+        for i in 1...10 {
+            rowTitlesArray.append("Fila #\(i)")
+        }
+        return rowTitlesArray
     }
 }

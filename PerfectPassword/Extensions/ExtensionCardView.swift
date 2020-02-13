@@ -19,10 +19,6 @@ extension CardViewController : UICollectionViewDataSource, UICollectionViewDeleg
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CustomCell", for: indexPath) as? CustomCell else {
             fatalError()
         }
-        
-        debugPrint("El ancho de la celda es -> \(cell.frame.size.width)")
-        debugPrint("El ancho del collection es -> \(collectionView.frame.size.width/3)")
-        debugPrint("El ancho de la pantalla es -> \(view.frame.size.width)")
         cell.cellLabel.text = cardArray[indexPath.row]
         return cell
     }
@@ -33,7 +29,7 @@ extension CardViewController : UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let totalWidth = collectionView.bounds.size.width
-        let numberOfColumns = 11
+        let numberOfColumns = 3
         let dimensions = CGFloat(Int(totalWidth) / numberOfColumns)
         return CGSize(width: dimensions, height: dimensions)
     }

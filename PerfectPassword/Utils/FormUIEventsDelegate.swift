@@ -26,7 +26,7 @@ protocol HandleDataDelegate {
 }
 
 protocol CipherTasksDelegate {
-    func getCard(passLength: Int, charSet: String) -> [String]
-    func saveInputData(key: String, passcodeLength: Int, characterSet: String)
-    func retrieveInitialData() -> (key: String, passLength: Int, charSet: String, cardArray: [String])
+    func getCardAndKey(passLength: Int, charSet: String) -> (cardArray: [String], key: String)
+    func saveInputData(key: String, characterSet: String, initialCounter: Int)
+    func retrieveInitialData() -> (key: String, charSet: String, cardArray: [String])
 }

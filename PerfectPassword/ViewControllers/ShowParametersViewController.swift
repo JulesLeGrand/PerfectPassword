@@ -25,8 +25,8 @@ class ShowParametersViewController: UIViewController {
         self.delegate = dataManagement
         self.delegateChiper = cipherTasks
         setupController()
-        let value = UIInterfaceOrientation.portrait.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
+//        let value = UIInterfaceOrientation.portrait.rawValue
+//        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +34,8 @@ class ShowParametersViewController: UIViewController {
         if let initialData = delegate?.retrieveInitialData() {
 //           print("DEsde viewWillAppear_ShowParametersViewController \(initialData)")
             showDataView.passcodeLengthLbl.text = String(initialData.passLength)
+            showDataView.sequenceKeyLbl.text = initialData.key
+            showDataView.characterSetTV.text = initialData.charSet
         }
     }
     
