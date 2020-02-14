@@ -25,17 +25,23 @@ class ShowParametersViewController: UIViewController {
         self.delegate = dataManagement
         self.delegateChiper = cipherTasks
         setupController()
-//        let value = UIInterfaceOrientation.portrait.rawValue
-//        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if let initialData = delegate?.retrieveInitialData() {
-//           print("DEsde viewWillAppear_ShowParametersViewController \(initialData)")
-            showDataView.passcodeLengthLbl.text = String(initialData.passLength)
-            showDataView.sequenceKeyLbl.text = initialData.key
-            showDataView.characterSetTV.text = initialData.charSet
+            if initialData.key != "" {
+    //           print("DEsde viewWillAppear_ShowParametersViewController \(initialData)")
+                debugPrint("--> \(String(describing: type(of: self))), \(#function) - Line \(#line) > We have initial Data!")
+                showDataView.passcodeLengthLbl.text = String(initialData.passLength)
+                showDataView.sequenceKeyLbl.text = initialData.key
+                showDataView.characterSetTV.text = initialData.charSet
+            } else {
+                debugPrint("--> \(String(describing: type(of: self))), \(#function) - Line \(#line) > No initial Data my friend!")
+                showDataView.sequenceKeyLbl.text = "There are no data yet, please get a new sequence key"
+                showDataView.generatePassBtn.isEnabled = false
+                showDataView.generatePassBtn.setTitleColor(UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 0.1), for: .disabled)
+            }
         }
     }
     

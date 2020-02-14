@@ -19,49 +19,26 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         delegate = cipherTasks
-//        fillTestArray()
-//        let value = UIInterfaceOrientation.landscapeLeft.rawValue
-//        UIDevice.current.setValue(value, forKey: "orientation")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        debugPrint("En viewWillAppear")
+        debugPrint("--> \(String(describing: type(of: self))), \(#function) - Line \(#line) > Hi!")
         cardPassView.collectionView.delegate = self
         cardPassView.collectionView.dataSource = self
-        //TODO: Preguntar si existen datos guardados para mostrar la tarjeta
-        let initialData = delegate?.retrieveInitialData()
-            if (initialData?.cardArray.isEmpty)! {
-                debugPrint("Esta vacio el arreglo de card")
-            } else {
-                self.cardArray = initialData!.cardArray
-            }
         
+        if let initialData = delegate?.retrieveInitialData() {
+            if (initialData.cardArray.isEmpty) {
+                debugPrint("CardArray is Empty")
+            } else {
+                self.cardArray = initialData.cardArray
+            }
+        }
         
     }
         
     func customInitSymmetric(cardContent: [String]) {
-//        debugPrint("DEsde customInitSymmetric \(cardContent)")
+        cardArray = cardContent
     }
     
-
-    
-    func fillTestArray() {
-//        let inicio = 123456789101213
-//        let inicio = 1234
-        let inicio = 10234567891
-        for i in inicio ... (inicio + 109) {
-            cardArray.append(String(i))
-        }
-        print(cardArray)
-    }
-    
-//    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//        return .landscapeLeft
-//    }
-//    
-//    override var shouldAutorotate: Bool {
-//        return true
-//    }
-
 }

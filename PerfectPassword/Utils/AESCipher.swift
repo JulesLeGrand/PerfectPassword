@@ -26,7 +26,7 @@ class AESCipher: CipherTasksDelegate {
     }
     
     
-    var cardArray: [String] = ["HOLA"]
+//    var cardArray: [String] = ["HOLA"]
     
     func getCardAndKey(passLength: Int, charSet: String) -> (cardArray: [String], key: String) {
 //        let

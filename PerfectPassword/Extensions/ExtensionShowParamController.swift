@@ -7,23 +7,20 @@
 //
 
 import UIKit
-import CryptoKit
 
 extension ShowParametersViewController: FormUIEventsDelegate {
     
     func generatePassTapped(passLength: Int, charSet: String) {
         let initialData = cipherTasks.retrieveInitialData()
-        print("Mi inicial data: \(initialData)")
-        if initialData.key == "" {
-            let cardArray = cipherTasks.getCardAndKey(passLength: passLength, charSet: charSet)
-            cardVC.customInitSymmetric(cardContent: cardArray.cardArray)
+//        print("Mi inicial data: \(initialData)")
+        if initialData.key != "" {
+            debugPrint("cardPass exists!!!")
+            self.showDataView.sequenceKeyLbl.text = initialData.key
+            self.showDataView.characterSetTV.text = initialData.charSet
+            let cardArray = initialData.cardArray
+            cardVC.customInitSymmetric(cardContent: cardArray)
             self.navigationController?.pushViewController(cardVC, animated: true)
             tabBarController?.selectedIndex = 1
-        } else {
-            //TODO: COntruye tarjeta y muestrala
-//            showDataView.sequenceKeyLbl.text = initialData.key
-            debugPrint("YA existe tarjeta")
-            self.inflatePassCard()
         }
     }
     
@@ -56,6 +53,7 @@ extension ShowParametersViewController: FormUIEventsDelegate {
     
     func inflatePassCard() {
         guard let charSet = self.showDataView.characterSetTV.text else { return }
+        showDataView.generatePassBtn.isEnabled = true
         let cardArrayAndKey = self.cipherTasks.getCardAndKey(passLength: 11, charSet: charSet)
         self.showDataView.sequenceKeyLbl.text = cardArrayAndKey.key
         self.cardVC.customInitSymmetric(cardContent: cardArrayAndKey.cardArray)
