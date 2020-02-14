@@ -154,7 +154,7 @@ class AESCipher: CipherTasksDelegate {
     func setRowTitles() -> [String] {
         var rowTitlesArray = [String]()
         for i in 1...10 {
-            rowTitlesArray.append("Fila #\(i)")
+            rowTitlesArray.append("Row #\(i)")
         }
         return rowTitlesArray
     }

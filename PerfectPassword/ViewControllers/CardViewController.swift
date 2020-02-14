@@ -30,8 +30,13 @@ class CardViewController: UIViewController {
         if let initialData = delegate?.retrieveInitialData() {
             if (initialData.cardArray.isEmpty) {
                 debugPrint("CardArray is Empty")
+                showAlert(message: "There are no data. Please return to Form Screen and tap \"New Sequence Key\" button")
             } else {
+                debugPrint("CardArray have data")
                 self.cardArray = initialData.cardArray
+                DispatchQueue.main.async {
+                    self.cardPassView.collectionView.reloadData()
+                }
             }
         }
         
@@ -39,6 +44,15 @@ class CardViewController: UIViewController {
         
     func customInitSymmetric(cardContent: [String]) {
         cardArray = cardContent
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController (title: "!Atention!", message: message, preferredStyle: .alert)
+        let yes = UIAlertAction(title: "Ok", style: .destructive) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(yes)
+        present(alert, animated: true, completion: nil)
     }
     
 }

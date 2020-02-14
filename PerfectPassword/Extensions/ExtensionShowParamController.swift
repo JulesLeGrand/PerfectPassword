@@ -67,6 +67,13 @@ extension ShowParametersViewController: UITextViewDelegate {
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         debugPrint("textViewDidBeginEditing")
+        textView.layoutIfNeeded()
+        self.initialCharacterSet = textView.text!
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.layoutIfNeeded()
+        self.editedCharacterSet = textView.text!
     }
     
 }

@@ -18,6 +18,9 @@ class ShowParametersViewController: UIViewController {
     
     let cardVC = CardViewController()
     
+    var initialCharacterSet = ""
+    var editedCharacterSet = ""
+    
     @IBOutlet weak var showDataView: ShowData!
     
     override func viewDidLoad() {
@@ -70,6 +73,7 @@ class ShowParametersViewController: UIViewController {
     
     @objc func doneBtnAction() {
         self.view.endEditing(true)
+        compareStrings()
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
@@ -78,6 +82,27 @@ class ShowParametersViewController: UIViewController {
     
     override var shouldAutorotate: Bool {
         return true
+    }
+    
+    func compareStrings() {
+        if initialCharacterSet != editedCharacterSet {
+            //The Strings are diferent
+            showAlert(message: "Are you sure to change the caracter set? All data will change...")
+        }
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController (title: "!Atention!", message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            self.showDataView.characterSetTV.text = self.initialCharacterSet
+            self.navigationController?.popViewController(animated: true)
+        }
+        let yes = UIAlertAction(title: "Yes", style: .destructive) { (action) in
+            self.inflatePassCard()
+        }
+        alert.addAction(cancel)
+        alert.addAction(yes)
+        present(alert, animated: true, completion: nil)
     }
 
 }
