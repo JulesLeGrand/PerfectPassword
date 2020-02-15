@@ -8,22 +8,25 @@ Cabe mencionar que **CryptoKit** hasta el momento no permite al programador esta
 
 Para más información con respecto al algoritmo se puede consultar la siguiente liga:
 
-[https://www.grc.com/ppp/algorithm.htm](GRC)
+[GRC](https://www.grc.com/ppp/algorithm.htm)
 
 Para las operaciones con números de 128 bits se usa la siguiente biblioteca: 
 
-[https://github.com/Jitsusama/UInt128]
+[UInt128](https://github.com/Jitsusama/UInt128)
 
 
 ## Consideraciones
 
-Esta app funciona para teléfonos de iPhone 8 en adelante  con iOS 13.2 en adelante debido al uso de la biblioteca **Cryptokit**
+- Esta app **sólo funciona para teléfonos de iPhone 8 en adelante con iOS 13.2 o superior** debido al uso de _cryptokit_.
+- La app funciona para un pass code length igual a 11.
+- El character set debe ser al menos de 16 caracteres.
+
 
 ## Instalación
  
  1. Tener instalado Xcode al menos la versión 11.3.1(11C504)
- 2. Clonar el repositorio usando la siguiente liga [https://github.com/JulesLeGrand/PerfectPassword.git].
- 3. Abrir el archivo PerfectPassword.xcodeproj
+ 2. [Clonar el repositorio](https://help.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository) de la siguiente liga [Perfect Paper Password](https://github.com/JulesLeGrand/PerfectPassword.git).
+ 3. Abrir el archivo PerfectPassword.xcodeproj con _Xcode_
  4. Seleccionar un emulador (Se recomienda iPhone 8) o algún otro con iOS 13.3.
- 5. En Xcode en el menú Product elegir la opción Run
- 6. Esperar a que construya e inicie la app.
+ 5. En _Xcode_ en el menú Product elegir la opción Run
+ 6. Esperar a que construya (_Build_) e inicie la app.
