@@ -29,10 +29,8 @@ class CardViewController: UIViewController {
         
         if let initialData = delegate?.retrieveInitialData() {
             if (initialData.cardArray.isEmpty) {
-                debugPrint("CardArray is Empty")
                 showAlert(message: "There are no data. Please return to Form Screen and tap \"New Sequence Key\" button")
             } else {
-                debugPrint("CardArray have data")
                 self.cardArray = initialData.cardArray
                 DispatchQueue.main.async {
                     self.cardPassView.collectionView.reloadData()
